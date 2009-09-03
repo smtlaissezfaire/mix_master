@@ -1,0 +1,22 @@
+= BUGS
+
+- unmixing doesn't remove the methods from parents. So:
+
+    module Foo
+      def one; end
+    end
+  
+    module Bar
+      include Foo
+    end
+  
+    class Baz
+      mixin Foo
+      mixout Foo
+    end
+  
+    # In this scenario, Baz.new will still respond to #one
+
+- Modules which redefine #clone may be subject to arbitrary bugs.
+- extend does not yet work appropriately.
+- overriding Module#include, Module#extend would be desirable, but then should #included_modules also be changed to lie?

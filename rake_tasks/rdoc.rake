@@ -10,7 +10,7 @@ Rake::RDocTask.new do |rdoc|
 
   rdoc.options << '--webcvs=http://github.com/mislav/will_paginate/tree/master/'
 
-  ["README.rdoc", "GPL_LICENSE", "MIT_LICENSE", "lib/**/*.rb"].each do |file|
+  ["README.rdoc", "BUGS.rdoc", "GPL_LICENSE", "MIT_LICENSE", "lib/**/*.rb"].each do |file|
     rdoc.rdoc_files.include(file)
   end
 end
