@@ -1,0 +1,3 @@
+= BUGS
+
+- Modules which redefine #clone may be subject to arbitrary bugs.
