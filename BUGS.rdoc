@@ -20,4 +20,3 @@
 - Modules which redefine #clone may be subject to arbitrary bugs.
 - extend does not yet work appropriately.
 - overriding Module#include, Module#extend would be desirable, but then should #included_modules also be changed to lie?
-- No Module#mixin, Module#mixout (yet)
