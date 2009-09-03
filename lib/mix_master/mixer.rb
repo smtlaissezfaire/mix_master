@@ -24,7 +24,7 @@ module MixMaster
   
     def check_mixin(from, to)
       unless mixin_list.exists?(from, to)
-        raise MixMaster::MixingError, "#{from} was never mixed into #{to} with \#mixin"
+        raise MixMaster::MixingError, "#{from} was never mixed into #{to} with #mixin"
       end
     end
   
