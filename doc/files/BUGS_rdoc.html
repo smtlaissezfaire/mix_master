@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang='en'>
   <head>
-    <title>File: README.rdoc [MY_PROJECT_NAME (FIXME)]</title>
+    <title>File: BUGS.rdoc [MY_PROJECT_NAME (FIXME)]</title>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
     <script type='text/javascript'>
@@ -25,10 +25,10 @@
   <body class='page'>
     <div class='file' id='wrapper'>
       <div class='header'>
-        <div class='name'>README.rdoc</div>
+        <div class='name'>BUGS.rdoc</div>
         <div class='paths'>
-          README.rdoc
-          (<a href="http://github.com/mislav/will_paginate/tree/master/README.rdoc">view online</a>)
+          BUGS.rdoc
+          (<a href="http://github.com/mislav/will_paginate/tree/master/BUGS.rdoc">view online</a>)
         </div>
         <div class='last-update'>
           Last Update:
@@ -38,16 +38,23 @@
       <div id='content'>
         <div id='text'>
           <div id='description'>
-            <h1><a href="../classes/MixMaster.html">MixMaster</a></h1>
-            <p>
-            A pure ruby solution for mixing &amp; unmix modules from classes.
-            </p>
-            <pre>module Foo&#x000A;  def foo&#x000A;    'foo'&#x000A;  end&#x000A;end&#x000A;&#x000A;class Baz&#x000A;  mixin Foo&#x000A;end&#x000A;&#x000A;b = Baz.new&#x000A;=&gt; #&lt;Baz:0x6aa48c&gt;&#x000A;b.foo&#x000A;=&gt; &quot;foo&quot;&#x000A;&#x000A;Baz.mixout Foo&#x000A;=&gt; [Foo]&#x000A;&#x000A;Baz.new.foo&#x000A;NoMethodError: undefined method `foo' for #&lt;Baz:0x69a640&gt;&#x000A;      from (irb):30&#x000A;b.foo&#x000A;NoMethodError: undefined method `foo' for #&lt;Baz:0x6aa48c&gt;&#x000A;      from (irb):31</pre>
-            <h2>Inspiration</h2>
-            <p>
-            Both _why&#8217;s and Dan Manges&#8217; libraries (mixico and mixology)
-            have been of great inspiration.
-            </p>
+            <h1>BUGS</h1>
+            <ul>
+            <li>unmixing doesn&#8217;t remove the methods from parents. So:
+            
+            <pre>module Foo&#x000A;  def one; end&#x000A;end&#x000A;&#x000A;module Bar&#x000A;  include Foo&#x000A;end&#x000A;&#x000A;class Baz&#x000A;  mixin Foo&#x000A;  mixout Foo&#x000A;end&#x000A;&#x000A;# In this scenario, Baz.new will still respond to #one</pre>
+            </li>
+            <li>Modules which redefine clone may be subject to arbitrary bugs.
+            
+            </li>
+            <li>extend does not yet work appropriately.
+            
+            </li>
+            <li>overriding Module#include, Module#extend would be desirable, but then
+            should included_modules also be changed to lie?
+            
+            </li>
+            </ul>
           </div>
           <div id='section'>
           </div>
