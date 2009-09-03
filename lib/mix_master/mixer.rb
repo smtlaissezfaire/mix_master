@@ -1,4 +1,4 @@
-class MixMaster
+module MixMaster
   module Mixer
     def mixin(mod, target)
       mod_duplicate = mod.clone

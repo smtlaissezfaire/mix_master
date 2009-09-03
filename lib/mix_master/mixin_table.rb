@@ -1,4 +1,4 @@
-class MixMaster
+module MixMaster
   class MixinTable
     def initialize
       @list = {}
