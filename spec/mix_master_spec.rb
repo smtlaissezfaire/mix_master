@@ -124,7 +124,7 @@ describe MixMaster do
         @target.new.should respond_to(:one)
       end
       
-      it "should remove methods from other modules" do
+      it "should NOT remove methods from other parents (such as modules included into the module given)" do
         one = Module.new do
           def one; end
         end
@@ -136,7 +136,7 @@ describe MixMaster do
         MixMaster.mixin(two, @target)
         MixMaster.mixout(two, @target)
         
-        @target.new.should_not respond_to(:one)
+        @target.new.should respond_to(:one)
       end
       
       it "should not remove methods like to_s which will be defined on a regular object & a module (since the class is always first in the hierarchy chain)" do
@@ -158,7 +158,6 @@ describe MixMaster do
         
         two = Module.new do
           def something
-            raise "got here"
             super
           end
         end
@@ -169,8 +168,8 @@ describe MixMaster do
           end
         end
         
-        MixMaster.mixin(two, klass)
         MixMaster.mixin(one, klass)
+        MixMaster.mixin(two, klass)
         MixMaster.mixout(two, klass)
         
         klass.new.something.should == "from_mod"

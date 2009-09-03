@@ -12,10 +12,10 @@ module MixMaster
       check_mixin(from, to)
       
       mixin_list.get(from, to).instance_eval do
-        methods = (public_instance_methods + protected_instance_methods + private_instance_methods)
+        methods = (public_instance_methods(false) + protected_instance_methods(false) + private_instance_methods(false))
         
         methods.each do |m|
-          undef_method m
+          remove_method m
         end
       end
     end
