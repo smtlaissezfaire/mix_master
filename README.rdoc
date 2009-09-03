@@ -1,1 +1,28 @@
 = MixMaster
+
+Mix & unmix modules from classes.
+
+module Foo
+  def foo
+    'foo'
+  end
+end
+
+class Baz
+  mixin Foo
+end
+
+b = Baz.new
+=> #<Baz:0x6aa48c>
+b.foo
+=> "foo"
+
+Baz.mixout Foo
+=> [Foo]
+
+Baz.new.foo
+NoMethodError: undefined method `foo' for #<Baz:0x69a640>
+	from (irb):30
+b.foo
+NoMethodError: undefined method `foo' for #<Baz:0x6aa48c>
+	from (irb):31
