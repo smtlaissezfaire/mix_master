@@ -1,6 +1,6 @@
 = MixMaster
 
-Mix & unmix modules from classes.
+A pure ruby solution for mixing & unmix modules from classes.
 
   module Foo
     def foo
@@ -26,3 +26,7 @@ Mix & unmix modules from classes.
   b.foo
   NoMethodError: undefined method `foo' for #<Baz:0x6aa48c>
   	from (irb):31
+
+== Inspiration
+
+Both _why's and Dan Manges' libraries (mixico and mixology) have been of great inspiration.
