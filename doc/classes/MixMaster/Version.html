@@ -44,24 +44,14 @@
               <div class='name-list'>
                 <table summary='Constants'>
                   <tr class='top-aligned-row context-row'>
-                    <td class='context-item-name'>MAJOR</td>
+                    <td class='context-item-name'>STRING</td>
                     <td>=</td>
-                    <td class='context-item-value'>0</td>
-                  </tr>
-                  <tr class='top-aligned-row context-row'>
-                    <td class='context-item-name'>MINOR</td>
-                    <td>=</td>
-                    <td class='context-item-value'>0</td>
+                    <td class='context-item-value'>File.read(File.expand_path(File.dirname(__FILE__) + &quot;/../../VERSION&quot;)).strip</td>
                   </tr>
                   <tr class='top-aligned-row context-row'>
                     <td class='context-item-name'>TINY</td>
                     <td>=</td>
-                    <td class='context-item-value'>2</td>
-                  </tr>
-                  <tr class='top-aligned-row context-row'>
-                    <td class='context-item-name'>STRING</td>
-                    <td>=</td>
-                    <td class='context-item-value'>&quot;#{MAJOR}.#{MINOR}.#{TINY}&quot;</td>
+                    <td class='context-item-value'>STRING.split(&quot;,&quot;)</td>
                   </tr>
                 </table>
               </div>
