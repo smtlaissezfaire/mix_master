@@ -12,6 +12,7 @@ begin
     gemspec.email       = "scott@railsnewbie.com"
     gemspec.homepage    = "http://github.com/smtlaissezfaire/mix_master"
     gemspec.authors     = ["Scott Taylor"]
+    gemspec.add_dependency "using"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
