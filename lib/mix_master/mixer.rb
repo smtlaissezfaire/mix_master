@@ -18,13 +18,15 @@ module MixMaster
           remove_method m
         end
       end
+      
+      mixin_table.delete(from, to)
     end
     
   private
   
     def check_mixin(from, to)
       unless mixin_table.exists?(from, to)
-        raise MixMaster::MixingError, "#{from} was never mixed into #{to} with #mixin"
+        raise MixMaster::MixingError, "#{from} was never mixed into #{to} with #mixin, or was already mixed out"
       end
     end
   
