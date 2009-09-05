@@ -42,37 +42,37 @@
             <h2>Methods</h2>
             <h3>public instance</h3>
             <ol>
-              <li><a href="#M000001">mixin</a></li>
-              <li><a href="#M000002">mixout</a></li>
+              <li><a href="#M000003">mixin</a></li>
+              <li><a href="#M000004">mixout</a></li>
             </ol>
           </div>
           <div id='section'>
             <div id='methods'>
               <h2>Public instance methods</h2>
-              <div class='public-instance method' id='method-M000001'>
-                <a name='M000001'>      </a>
+              <div class='public-instance method' id='method-M000003'>
+                <a name='M000003'>      </a>
                 <div class='synopsis'>
                   <span class='name'>mixin</span>
                   <span class='arguments'>(mod, target)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000001-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000003-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000001-source'>   <span class="ruby-comment cmt"># File lib/mix_master/mixer.rb, line 3</span>&#x000A;3:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mixin</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">target</span>)&#x000A;4:       <span class="ruby-identifier">mod_duplicate</span> = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">clone</span>&#x000A;5:       &#x000A;6:       <span class="ruby-identifier">target</span>.<span class="ruby-identifier">instance_eval</span> { <span class="ruby-identifier">include</span> <span class="ruby-identifier">mod_duplicate</span> }&#x000A;7:       &#x000A;8:       <span class="ruby-identifier">mixin_list</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">mod_duplicate</span>)&#x000A;9:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000003-source'>   <span class="ruby-comment cmt"># File lib/mix_master/mixer.rb, line 3</span>&#x000A;3:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mixin</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">target</span>)&#x000A;4:       <span class="ruby-identifier">mod_duplicate</span> = <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">clone</span>&#x000A;5:       &#x000A;6:       <span class="ruby-identifier">target</span>.<span class="ruby-identifier">instance_eval</span> { <span class="ruby-identifier">include</span> <span class="ruby-identifier">mod_duplicate</span> }&#x000A;7:       &#x000A;8:       <span class="ruby-identifier">mixin_table</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">mod_duplicate</span>)&#x000A;9:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='public-instance method' id='method-M000002'>
-                <a name='M000002'>      </a>
+              <div class='public-instance method' id='method-M000004'>
+                <a name='M000004'>      </a>
                 <div class='synopsis'>
                   <span class='name'>mixout</span>
                   <span class='arguments'>(from, to)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000002-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000004-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000002-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixer.rb, line 11</span>&#x000A;11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mixout</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;12:       <span class="ruby-identifier">check_mixin</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;13:       &#x000A;14:       <span class="ruby-identifier">mixin_list</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>).<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword kw">do</span>&#x000A;15:         <span class="ruby-identifier">methods</span> = (<span class="ruby-identifier">public_instance_methods</span>(<span class="ruby-keyword kw">false</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">protected_instance_methods</span>(<span class="ruby-keyword kw">false</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">private_instance_methods</span>(<span class="ruby-keyword kw">false</span>))&#x000A;16:         &#x000A;17:         <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>&#x000A;18:           <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">m</span>&#x000A;19:         <span class="ruby-keyword kw">end</span>&#x000A;20:       <span class="ruby-keyword kw">end</span>&#x000A;21:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000004-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixer.rb, line 11</span>&#x000A;11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mixout</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;12:       <span class="ruby-identifier">check_mixin</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;13:       &#x000A;14:       <span class="ruby-identifier">mixin_table</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>).<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword kw">do</span>&#x000A;15:         <span class="ruby-identifier">methods</span> = (<span class="ruby-identifier">public_instance_methods</span>(<span class="ruby-keyword kw">false</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">protected_instance_methods</span>(<span class="ruby-keyword kw">false</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">private_instance_methods</span>(<span class="ruby-keyword kw">false</span>))&#x000A;16:         &#x000A;17:         <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>&#x000A;18:           <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">m</span>&#x000A;19:         <span class="ruby-keyword kw">end</span>&#x000A;20:       <span class="ruby-keyword kw">end</span>&#x000A;21:       &#x000A;22:       <span class="ruby-identifier">mixin_table</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;23:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
             </div>

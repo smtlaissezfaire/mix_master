@@ -46,69 +46,83 @@
             <h2>Methods</h2>
             <h3>public class</h3>
             <ol>
-              <li><a href="#M000005">new</a></li>
+              <li><a href="#M000007">new</a></li>
             </ol>
             <h3>public instance</h3>
             <ol>
-              <li><a href="#M000007">exists?</a></li>
-              <li><a href="#M000008">get</a></li>
-              <li><a href="#M000006">set</a></li>
+              <li><a href="#M000011">delete</a></li>
+              <li><a href="#M000009">exists?</a></li>
+              <li><a href="#M000010">get</a></li>
+              <li><a href="#M000008">set</a></li>
             </ol>
           </div>
           <div id='section'>
             <div id='methods'>
               <h2>Public class methods</h2>
-              <div class='public-class method' id='method-M000005'>
-                <a name='M000005'>      </a>
+              <div class='public-class method' id='method-M000007'>
+                <a name='M000007'>      </a>
                 <div class='synopsis'>
                   <span class='name'>new</span>
                   <span class='arguments'>()</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000005-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000007-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000005-source'>   <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 3</span>&#x000A;3:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>&#x000A;4:       <span class="ruby-ivar">@list</span> = {}&#x000A;5:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000007-source'>   <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 3</span>&#x000A;3:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>&#x000A;4:       <span class="ruby-ivar">@list</span> = {}&#x000A;5:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
               <h2>Public instance methods</h2>
-              <div class='public-instance method' id='method-M000007'>
-                <a name='M000007'>      </a>
+              <div class='public-instance method' id='method-M000011'>
+                <a name='M000011'>      </a>
+                <div class='synopsis'>
+                  <span class='name'>delete</span>
+                  <span class='arguments'>(from, to)</span>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000011-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000011-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 20</span>&#x000A;20:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;21:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">from</span>] = <span class="ruby-keyword kw">nil</span>&#x000A;22:     <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='public-instance method' id='method-M000009'>
+                <a name='M000009'>      </a>
                 <div class='synopsis'>
                   <span class='name'>exists?</span>
                   <span class='arguments'>(from, to)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000007-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000009-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000007-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 12</span>&#x000A;12:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;13:       <span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>&#x000A;14:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000009-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 12</span>&#x000A;12:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;13:       <span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>&#x000A;14:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='public-instance method' id='method-M000008'>
-                <a name='M000008'>      </a>
+              <div class='public-instance method' id='method-M000010'>
+                <a name='M000010'>      </a>
                 <div class='synopsis'>
                   <span class='name'>get</span>
                   <span class='arguments'>(from, to)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000008-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000010-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000008-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 16</span>&#x000A;16:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;17:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">from</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">from</span>][<span class="ruby-identifier">to</span>]&#x000A;18:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000010-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 16</span>&#x000A;16:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)&#x000A;17:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">from</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">from</span>][<span class="ruby-identifier">to</span>]&#x000A;18:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
-              <div class='public-instance method' id='method-M000006'>
-                <a name='M000006'>      </a>
+              <div class='public-instance method' id='method-M000008'>
+                <a name='M000008'>      </a>
                 <div class='synopsis'>
                   <span class='name'>set</span>
                   <span class='arguments'>(source, target, source_dup)</span>
                 </div>
                 <div class='source'>
-                  <a class='source-toggle' href='#' onclick="toggleCode('M000006-source'); return false">
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000008-source'); return false">
                     [show source]
                   </a>
-                  <pre id='M000006-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 7</span>&#x000A; 7:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">source_dup</span>)&#x000A; 8:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">source</span>] <span class="ruby-operator">||=</span> {}&#x000A; 9:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">source</span>][<span class="ruby-identifier">target</span>] = <span class="ruby-identifier">source_dup</span>&#x000A;10:     <span class="ruby-keyword kw">end</span></pre>
+                  <pre id='M000008-source'>    <span class="ruby-comment cmt"># File lib/mix_master/mixin_table.rb, line 7</span>&#x000A; 7:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">source_dup</span>)&#x000A; 8:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">source</span>] <span class="ruby-operator">||=</span> {}&#x000A; 9:       <span class="ruby-ivar">@list</span>[<span class="ruby-identifier">source</span>][<span class="ruby-identifier">target</span>] = <span class="ruby-identifier">source_dup</span>&#x000A;10:     <span class="ruby-keyword kw">end</span></pre>
                 </div>
               </div>
             </div>

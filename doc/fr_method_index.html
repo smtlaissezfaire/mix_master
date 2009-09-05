@@ -4331,14 +4331,17 @@
         
         Element.addMethods();
         var search_index = [
-          { method: 'exists?', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000007"><span class="method_name">exists?</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
-          { method: 'get', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000008"><span class="method_name">get</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
-          { method: 'mixin', module: 'mixmaster::moduleextension', html: '<a href="classes/MixMaster/ModuleExtension.html#M000003"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a>' },
-          { method: 'mixin', module: 'mixmaster::mixer', html: '<a href="classes/MixMaster/Mixer.html#M000001"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::Mixer)</span></a>' },
-          { method: 'mixout', module: 'mixmaster::moduleextension', html: '<a href="classes/MixMaster/ModuleExtension.html#M000004"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a>' },
-          { method: 'mixout', module: 'mixmaster::mixer', html: '<a href="classes/MixMaster/Mixer.html#M000002"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::Mixer)</span></a>' },
-          { method: 'new', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000005"><span class="method_name">new</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
-          { method: 'set', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000006"><span class="method_name">set</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'delete', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000011"><span class="method_name">delete</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'exists?', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000009"><span class="method_name">exists?</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'get', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000010"><span class="method_name">get</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'install', module: 'mixmaster', html: '<a href="classes/MixMaster.html#M000001"><span class="method_name">install</span> <span class="module_name">(MixMaster)</span></a>' },
+          { method: 'mixin', module: 'mixmaster::moduleextension', html: '<a href="classes/MixMaster/ModuleExtension.html#M000005"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a>' },
+          { method: 'mixin', module: 'mixmaster::mixer', html: '<a href="classes/MixMaster/Mixer.html#M000003"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::Mixer)</span></a>' },
+          { method: 'mixout', module: 'mixmaster::mixer', html: '<a href="classes/MixMaster/Mixer.html#M000004"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::Mixer)</span></a>' },
+          { method: 'mixout', module: 'mixmaster::moduleextension', html: '<a href="classes/MixMaster/ModuleExtension.html#M000006"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a>' },
+          { method: 'new', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000007"><span class="method_name">new</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'set', module: 'mixmaster::mixintable', html: '<a href="classes/MixMaster/MixinTable.html#M000008"><span class="method_name">set</span> <span class="module_name">(MixMaster::MixinTable)</span></a>' },
+          { method: 'uninstall', module: 'mixmaster', html: '<a href="classes/MixMaster.html#M000002"><span class="method_name">uninstall</span> <span class="module_name">(MixMaster)</span></a>' },
         ]
         $(document).observe('dom:loaded', function() {
         	// Setup search-during-typing.
@@ -4409,14 +4412,17 @@
       </form>
       <ol class='methods' id='search-results' style='display: none'></ol>
       <ol class='methods' id='index-entries'>
-        <li><a href="classes/MixMaster/MixinTable.html#M000007"><span class="method_name">exists?</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
-        <li><a href="classes/MixMaster/MixinTable.html#M000008"><span class="method_name">get</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
-        <li><a href="classes/MixMaster/ModuleExtension.html#M000003"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a></li>
-        <li><a href="classes/MixMaster/Mixer.html#M000001"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::Mixer)</span></a></li>
-        <li><a href="classes/MixMaster/ModuleExtension.html#M000004"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a></li>
-        <li><a href="classes/MixMaster/Mixer.html#M000002"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::Mixer)</span></a></li>
-        <li><a href="classes/MixMaster/MixinTable.html#M000005"><span class="method_name">new</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
-        <li><a href="classes/MixMaster/MixinTable.html#M000006"><span class="method_name">set</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster/MixinTable.html#M000011"><span class="method_name">delete</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster/MixinTable.html#M000009"><span class="method_name">exists?</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster/MixinTable.html#M000010"><span class="method_name">get</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster.html#M000001"><span class="method_name">install</span> <span class="module_name">(MixMaster)</span></a></li>
+        <li><a href="classes/MixMaster/ModuleExtension.html#M000005"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a></li>
+        <li><a href="classes/MixMaster/Mixer.html#M000003"><span class="method_name">mixin</span> <span class="module_name">(MixMaster::Mixer)</span></a></li>
+        <li><a href="classes/MixMaster/Mixer.html#M000004"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::Mixer)</span></a></li>
+        <li><a href="classes/MixMaster/ModuleExtension.html#M000006"><span class="method_name">mixout</span> <span class="module_name">(MixMaster::ModuleExtension)</span></a></li>
+        <li><a href="classes/MixMaster/MixinTable.html#M000007"><span class="method_name">new</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster/MixinTable.html#M000008"><span class="method_name">set</span> <span class="module_name">(MixMaster::MixinTable)</span></a></li>
+        <li><a href="classes/MixMaster.html#M000002"><span class="method_name">uninstall</span> <span class="module_name">(MixMaster)</span></a></li>
       </ol>
     </div>
   </body>
