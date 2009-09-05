@@ -5,13 +5,13 @@ module MixMaster
       
       target.instance_eval { include mod_duplicate }
       
-      mixin_list.set(mod, target, mod_duplicate)
+      mixin_table.set(mod, target, mod_duplicate)
     end
   
     def mixout(from, to)
       check_mixin(from, to)
       
-      mixin_list.get(from, to).instance_eval do
+      mixin_table.get(from, to).instance_eval do
         methods = (public_instance_methods(false) + protected_instance_methods(false) + private_instance_methods(false))
         
         methods.each do |m|
@@ -23,13 +23,13 @@ module MixMaster
   private
   
     def check_mixin(from, to)
-      unless mixin_list.exists?(from, to)
+      unless mixin_table.exists?(from, to)
         raise MixMaster::MixingError, "#{from} was never mixed into #{to} with #mixin"
       end
     end
   
-    def mixin_list
-      @mixin_list ||= MixinTable.new
+    def mixin_table
+      @mixin_table ||= MixinTable.new
     end
   end
 end
