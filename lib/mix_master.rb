@@ -8,8 +8,6 @@ module MixMaster
   using :ModuleExtension
   using :Version
   
-  VERSION = Version::STRING
-  
   class MixingError < StandardError; end
   extend Mixer
   
