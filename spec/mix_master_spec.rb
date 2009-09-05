@@ -90,7 +90,7 @@ describe MixMaster do
       it "should raise an error if never mixed in" do
         lambda {
           MixMaster.mixout(@source, @target)
-        }.should raise_error(MixMaster::MixingError, "#{@source} was never mixed into #{@target} with \#mixin")
+        }.should raise_error(MixMaster::MixingError, "#{@source} was never mixed into #{@target} with #mixin, or was already mixed out")
       end
       
       it "should be able to mixout from a first module after mixing to a second one" do

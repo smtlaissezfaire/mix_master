@@ -16,5 +16,9 @@ module MixMaster
     def get(from, to)
       @list[from] && @list[from][to]
     end
+    
+    def delete(from, to)
+      @list[from] = nil
+    end
   end
 end

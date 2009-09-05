@@ -1,6 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + "/spec_helper")
 
 describe "module extensions" do
+  before do
+    MixMaster.install
+  end
+  
+  after do
+    MixMaster.uninstall
+  end
+  
   it "should be able to mixin to a class with mixin" do
     a_mod = Module.new do
       def foo; end
@@ -69,5 +77,21 @@ describe "module extensions" do
   
   it "should have mixout as a public interface" do
     Class.new.should respond_to(:mixout)
+  end
+  
+  it "should be able to mixout only once, raising an error the second time" do
+    mod = Module.new do
+      def a_method; end
+    end
+    
+    klass = Class.new do
+      mixin mod
+      mixin mod
+      mixout mod
+    end
+      
+    lambda {
+      klass.mixout mod
+    }.should raise_error(MixMaster::MixingError)
   end
 end
