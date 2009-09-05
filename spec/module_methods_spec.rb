@@ -1,6 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + "/spec_helper")
 
 describe "module extensions" do
+  before do
+    MixMaster.install
+  end
+  
+  after do
+    MixMaster.uninstall
+  end
+  
   it "should be able to mixin to a class with mixin" do
     a_mod = Module.new do
       def foo; end

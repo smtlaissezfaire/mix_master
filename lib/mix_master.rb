@@ -12,8 +12,14 @@ module MixMaster
   
   class MixingError < StandardError; end
   extend Mixer
-end
-
-class Module
-  include MixMaster::ModuleExtension
+  
+  class << self
+    def install
+      mixin MixMaster::ModuleExtension, Object
+    end
+  
+    def uninstall
+      mixout MixMaster::ModuleExtension, Object
+    end
+  end
 end
