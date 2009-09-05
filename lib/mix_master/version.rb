@@ -1,9 +1,9 @@
 module MixMaster
   module Version
-    MAJOR = 0
-    MINOR = 0
-    TINY  = 2
-  
-    STRING = "#{MAJOR}.#{MINOR}.#{TINY}"
+    STRING = File.read(File.expand_path(File.dirname(__FILE__) + "/../../VERSION")).strip
+    
+    MAJOR,
+    MINOR,
+    TINY   = STRING.split(",")
   end
 end
