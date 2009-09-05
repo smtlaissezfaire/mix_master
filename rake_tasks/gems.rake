@@ -2,13 +2,16 @@ begin
   require 'jeweler'
   
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name        = "the-perfect-gem"
-    gemspec.summary     = "Summarize your gem"
-    gemspec.description = "Describe your gem"
-    gemspec.email       = "josh@technicalpickles.com"
-    gemspec.homepage    = "http://github.com/technicalpickles/the-perfect-gem"
-    gemspec.description = "TODO"
-    gemspec.authors     = ["Josh Nichols"]
+    gemspec.name        = "mix_master"
+    gemspec.summary     = "Mix and unmix modules"
+    gemspec.description = <<-DESC
+      Allows modules to be unmixed at runtime from classes,
+      much as Mixology or Mixico do.  Implemented in pure ruby with
+      no C extensions.
+    DESC
+    gemspec.email       = "scott@railsnewbie.com"
+    gemspec.homepage    = "http://github.com/smtlaissezfaire/mix_master"
+    gemspec.authors     = ["Scott Taylor"]
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
